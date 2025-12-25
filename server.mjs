@@ -3,6 +3,13 @@ import { nanoid } from "nanoid";
 import { runHomeAudit } from "./audit.mjs";
 
 const app = express();
+
+
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -140,15 +147,29 @@ function renderHome() {
     .dxg-card strong{display:block;font-size:18px;margin-bottom:6px}
     .dxg-card p{margin:0;color:#334155;font-size:16px}
     @media (max-width:900px){ .dxg-card{grid-column:span 12} h1{font-size:38px} }
-  .audit-scope{margin-top:14px;padding:14px 16px;border-radius:12px;background:#fafafa;border:1px solid #eee;font-size:14px;line-height:1.6;color:#374151;} .audit-scope strong{color:#111827;font-weight:600;}.result-hook{margin:6px 0 18px;font-size:16px;font-weight:600;color:#111827;}</style>
+  .audit-scope{margin-top:14px;padding:14px 16px;border-radius:12px;background:#fafafa;border:1px solid #eee;font-size:14px;line-height:1.6;color:#374151;} .audit-scope strong{color:#111827;font-weight:600;}.result-hook{margin:6px 0 18px;font-size:16px;font-weight:600;color:#111827;}
+/* logo link reset */
+.brand,.dxg-logo{display:inline-block;}
+a.brand,a.dxg-logo{color:inherit;text-decoration:none;}
+a.brand:hover,a.dxg-logo:hover{opacity:.78;}
+
+
+/* ===== FORCE BRAND CLICKABLE (fix overlay/pointer-events) ===== */
+.dxg-header{position:relative !important;z-index:9999 !important;pointer-events:auto !important;}
+.dxg-header *{pointer-events:auto !important;}
+a.dxg-logo,a.brand{display:inline-block !important;pointer-events:auto !important;z-index:10000 !important;color:inherit !important;text-decoration:none !important;cursor:pointer !important;}
+a.dxg-logo:hover,a.brand:hover{opacity:.78;}
+
+</style>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/playfair.css">
 </head>
 <body>
-<header class="dxg-header"><div class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;">DAPHNETXG</div></header>
+<header class="dxg-header"><a class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;" href="https://daphnetxg.com" target="_blank" rel="noopener">DAPHNETXG</a></header>
   <div class="dxg-wrap">
     <div class="dxg-top">
       <div class="dxg-eyebrow">免费工具 · 无需注册 · 约 2 分钟</div>
@@ -390,15 +411,22 @@ function renderReport(data) {
       justify-content:space-between;
     }
     code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;padding:2px 8px;font-size:14px}
-  </style>
+  
+/* logo link reset */
+.brand,.dxg-logo{display:inline-block;}
+a.brand,a.dxg-logo{color:inherit;text-decoration:none;}
+a.brand:hover,a.dxg-logo:hover{opacity:.78;}
+
+</style>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/playfair.css">
 </head>
 <body>
-<header class="dxg-header"><div class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;">DAPHNETXG</div></header>
+<header class="dxg-header"><a class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;" href="https://daphnetxg.com" target="_blank" rel="noopener">DAPHNETXG</a></header>
   <div class="dxg-wrap">
     <div class="dxg-header">
       <div class="dxg-eyebrow">SEO 快速检测报告 · 首页快照 · ID ${esc(id)}</div>
@@ -497,13 +525,20 @@ app.post("/audit", async (req, res) => {
         .card{max-width:820px;margin:0 auto;border:1px solid #e5e7eb;border-radius:18px;padding:22px}
         .muted{color:#64748b;font-size:14px}
         a{color:#111827}
-      </style><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+      
+/* logo link reset */
+.brand,.dxg-logo{display:inline-block;}
+a.brand,a.dxg-logo{color:inherit;text-decoration:none;}
+a.brand:hover,a.dxg-logo:hover{opacity:.78;}
+
+</style><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/playfair.css">
 </head><body>
-<header class="dxg-header"><div class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;">DAPHNETXG</div></header>
+<header class="dxg-header"><a class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;" href="https://daphnetxg.com" target="_blank" rel="noopener">DAPHNETXG</a></header>
       <div class="card">
         <h1 style="margin:0 0 10px">检测失败</h1>
         <p>${esc(data.error || "未知错误")}</p>
