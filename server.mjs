@@ -497,5 +497,5 @@ app.post("/audit", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Free audit running on port ${PORT}`);
+  console.log(`Free audit v2025-12-25a running on port `);
 });
