@@ -140,9 +140,15 @@ function renderHome() {
     .dxg-card strong{display:block;font-size:18px;margin-bottom:6px}
     .dxg-card p{margin:0;color:#334155;font-size:16px}
     @media (max-width:900px){ .dxg-card{grid-column:span 12} h1{font-size:38px} }
-  </style>
+  .audit-scope{margin-top:14px;padding:14px 16px;border-radius:12px;background:#fafafa;border:1px solid #eee;font-size:14px;line-height:1.6;color:#374151;} .audit-scope strong{color:#111827;font-weight:600;}.result-hook{margin:6px 0 18px;font-size:16px;font-weight:600;color:#111827;}</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 </head>
 <body>
+<header class="dxg-header"><div class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;">DAPHNETXG</div></header>
   <div class="dxg-wrap">
     <div class="dxg-top">
       <div class="dxg-eyebrow">免费工具 · 无需注册 · 约 2 分钟</div>
@@ -157,6 +163,8 @@ function renderHome() {
       </form>
 
       <div class="dxg-hint">提示：仅检测首页，不抓取全站；不会读取私密数据或后台内容。</div>
+
+<div class="audit-scope">⚠️ <strong>重要说明：</strong><br>这是一次<strong>系统级首页快照检测</strong>，用于判断你的网站是否已经出现 <strong>被搜索系统忽略 / 被 AI 误读 / 被索引门槛拦截</strong> 的高风险信号。<br><br>它<strong>不会</strong>做全站抓取，也<strong>不会</strong>给你操作教学；但如果首页已经暴露风险，说明整个站点在搜索系统中的解释权已出现结构性问题。</div>
 
       <div class="dxg-grid">
         <div class="dxg-card">
@@ -383,8 +391,14 @@ function renderReport(data) {
     }
     code{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;padding:2px 8px;font-size:14px}
   </style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
 </head>
 <body>
+<header class="dxg-header"><div class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;">DAPHNETXG</div></header>
   <div class="dxg-wrap">
     <div class="dxg-header">
       <div class="dxg-eyebrow">SEO 快速检测报告 · 首页快照 · ID ${esc(id)}</div>
@@ -483,7 +497,13 @@ app.post("/audit", async (req, res) => {
         .card{max-width:820px;margin:0 auto;border:1px solid #e5e7eb;border-radius:18px;padding:22px}
         .muted{color:#64748b;font-size:14px}
         a{color:#111827}
-      </style></head><body>
+      </style><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght&display=swap" rel="stylesheet">
+</head><body>
+<header class="dxg-header"><div class="dxg-logo" style="font-family:'Playfair Display', serif; font-weight:700; letter-spacing:0; font-size:22px; color:#111;">DAPHNETXG</div></header>
       <div class="card">
         <h1 style="margin:0 0 10px">检测失败</h1>
         <p>${esc(data.error || "未知错误")}</p>
