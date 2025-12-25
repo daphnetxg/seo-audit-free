@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>免费 SEO 快照报告</title>
+<style>
+  :root{
+    --bg:#0b0b0c; --card:#141416; --bd:#232326;
+    --ink:#f5f5f7; --mut:#a1a1aa; --sub:#d4d4d8;
+    --good:#22c55e; --warn:#f59e0b; --bad:#ef4444;
+  }
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px;}
+  .card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:18px;margin:14px 0;}
+  h1{font-size:20px;margin:6px 0 4px;letter-spacing:.2px}
+  .muted{color:var(--mut);font-size:13px;line-height:1.7}
+  .url{color:var(--sub);font-size:14px;word-break:break-all;margin-top:8px}
+  .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--bd);border-radius:999px;font-size:13px}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .dot.good{background:var(--good)} .dot.warn{background:var(--warn)} .dot.bad{background:var(--bad)}
+  .top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:flex-start}
+  .title{font-size:18px;margin:0 0 10px}
+  .subtitle{color:var(--mut);font-size:13px;margin:0}
+  .hr{height:1px;background:var(--bd);margin:12px 0}
+  ul{margin:10px 0 0 18px}
+  .list{list-style:none;padding:0;margin:12px 0 0}
+  .item{border:1px solid #2a2a2e;border-radius:14px;padding:14px 14px;margin:10px 0;background:#101012}
+  .item-top{display:flex;align-items:center;gap:10px}
+  .item-ic{font-size:16px}
+  .item-title{font-weight:800}
+  .item-body{color:var(--sub);line-height:1.8;margin-top:8px}
+  .tag{display:inline-block;min-width:56px;text-align:center;font-size:12px;padding:3px 8px;border-radius:999px;margin-right:10px;border:1px solid #2a2a2e;color:var(--mut)}
+  .tag.high{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.35);color:#fff}
+  .tag.med{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.35);color:#fff}
+  .tag.low{background:rgba(161,161,170,.12);border-color:rgba(161,161,170,.35);color:#fff}
+  .tag.good{background:rgba(34,197,94,.12);border-color:rgba(34,197,94,.35);color:#fff}
+  .btn{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;padding:10px 14px;border-radius:12px;font-weight:900}
+  .btn2{display:inline-block;border:1px solid var(--bd);color:var(--ink);text-decoration:none;padding:10px 14px;border-radius:12px;font-weight:800;margin-left:8px}
+  code{background:#0e0e10;border:1px solid #2a2a2e;padding:2px 6px;border-radius:8px;color:#e5e7eb}
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- ① 顶部：判词 + 不确定性 -->
+    <div class="card">
+      <div class="top">
+        <div>
+          <div class="muted">DAPHNETXG · 免费 SEO 快照报告</div>
+          <h1>你的网站存在以下 SEO 风险信号（基于首页快照）</h1>
+          <p class="subtitle">本报告仅基于首页进行 2 分钟快速检测，未进行全站抓取。</p>
+          <div class="url"><strong>检测 URL：</strong>https://daphnetxg.com/</div>
+          <div class="muted">检测时间：2025-12-25T12:42:06.594Z · 抓取耗时：473ms · 状态码：<code>200</code></div>
+        </div>
+
+        <div class="badge">
+          <span class="dot warn"></span>
+          <span>⚠️ 存在中度风险，可能影响收录或点击率</span>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="muted">⚠️ 注意：这不是“好 / 不好”，而是——你现在不确定。首页通常是最像样的页面，真正影响收录与询盘的，往往藏在其他页面里。</div>
+    </div>
+
+    <!-- ② 核心价值区：技术项 -> 商业后果 -->
+    <div class="card">
+      <div class="title">我们在首页检测到的关键信号</div>
+      <ul class="list">
+        
+      <li class="item">
+        <div class="item-top">
+          <div class="item-ic">⚠️</div>
+          <div class="item-title">未检测到 H1 标题</div>
+        </div>
+        <div class="item-body">这可能导致搜索引擎无法快速抓住页面主题重点，进而影响页面理解与排名稳定性。</div>
+      </li>
+    
+      </ul>
+    </div>
+
+    <!-- 可选：给懂的人看原始信号（不抢戏） -->
+    <div class="card">
+      <div class="title">原始检测信号（给懂的人）</div>
+      <ul><li><span class="tag med">MED</span>Missing H1</li></ul>
+      <div class="muted" style="margin-top:10px">robots meta: <code>index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large</code> · x-robots-tag: <code>—</code></div>
+    </div>
+
+    <!-- ③ 认知引导：为什么只看首页不够 -->
+    <div class="card">
+      <div class="title">为什么“只看首页”是不够的？</div>
+      <div style="line-height:1.9;color:var(--sub)">
+        首页通常是 SEO 表现<strong>最好的页面</strong>。<br/><br/>
+        真正影响排名与询盘的，往往是以下页面：<br/>
+        • 栏目页 / 分类页<br/>
+        • 服务详情页<br/>
+        • 旧文章 / 历史内容<br/><br/>
+        这些页面是否存在大量重复、缺失、结构混乱，是首页检测无法告诉你的。<br/><br/>
+        <strong>这也是为什么很多网站：“首页看起来没问题，但整体 SEO 表现很差”。</strong>
+      </div>
+    </div>
+
+    <!-- ④ 升级：卖真相，不卖功能 -->
+    <div class="card">
+      <div class="title">升级后你会多知道什么？</div>
+      <div style="line-height:1.9;color:var(--sub)">
+        • 🔍 10 个关键页面的真实 SEO 状态<br/>
+        • 📊 哪些问题是“影响最大、最值得先修”的<br/>
+        • 🧭 你现在该先改哪里，而不是“全部重做”<br/>
+        • 📄 一份可直接交给执行团队的 PDF 修复清单<br/>
+      </div>
+      <div style="margin-top:14px">
+        <a class="btn" href="#" onclick="alert('下一步：把这里改成你的 RM200 购买链接（Stripe/结账页）。')">查看完整 10 页 SEO 审计（RM200）</a>
+        <a class="btn2" href="javascript:window.print()">打印</a>
+      </div>
+      <div class="muted" style="margin-top:10px">本服务不包含人工咨询，仅提供结构化诊断报告。</div>
+    </div>
+
+  </div>
+</body>
+</html>

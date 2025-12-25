@@ -1,0 +1,30 @@
+{
+  "audited_at": "2025-12-25T12:42:06.594Z",
+  "site": {
+    "input_url": "https://daphnetxg.com",
+    "final_url": "https://daphnetxg.com/",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "fetch_ms": 473,
+    "x_robots": "—",
+    "robots_meta": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+  },
+  "homepage": {
+    "title": "DAPHNETXG 官网首页",
+    "title_len": 14,
+    "meta_desc": "跨境 B2B · 询盘",
+    "meta_desc_len": 11,
+    "canonical": "https://daphnetxg.com/",
+    "h1_count": 0,
+    "h1_preview": [],
+    "has_og": true,
+    "has_schema_ld": true,
+    "index_hint": "No explicit NOINDEX signal detected on homepage headers/meta."
+  },
+  "signals": [
+    {
+      "level": "med",
+      "hit": "Missing H1"
+    }
+  ]
+}
