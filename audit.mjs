@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import cheerio from "cheerio";
+import { load } from "cheerio";
 
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123 Safari/537.36";
@@ -122,7 +122,7 @@ export async function runHomeAudit(inputUrl) {
   const contentType = headers["content-type"] || "";
   const xRobots = (headers["x-robots-tag"] || "").toLowerCase();
 
-  const $ = cheerio.load(html || "");
+  const $ = load(html || "");
 
   const title = ($("title").first().text() || "").trim();
   const metaDesc = ($('meta[name="description"]').attr("content") || "").trim();
